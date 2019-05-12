@@ -1,0 +1,39 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    // "command": "node-sass '.\\protostar-custom\\css\\scss\\custom.scss' --output '.\\protostar-custom\\css\\bs-customized.css'",
+    // "command": "node-sass './protostar-custom/css/scss/custom.scss' --output './protostar-custom/css/bs-customized.css'",
+    // "command": "node-sass '${workspaceRoot}\\protostar-custom\\css\\scss\\custom.scss' --output '${workspaceRoot}\\protostar-custom\\css\\bscustom.css'",
+    "version": "2.0.0",
+    // "windows": {
+    //     "options": {
+    //         "shell": {
+    //             "executable": "cmd.exe",
+    //             "args": ["/d", "/c"]
+    //         }
+    //     }
+    // },
+    "tasks": [
+        {
+            "label": "Sass Compile",
+            "type": "shell",
+            "command": "node-sass '${workspaceRoot}\\protostar-custom\\css\\scss\\bscustom.scss' --output '${workspaceRoot}\\protostar-custom\\css\\'",
+            "group": "build",
+            "problemMatcher": [
+                "$node-sass"
+            ],
+            "options": {
+                "shell": {
+                    "executable": "powershell.exe",
+                    "args": [
+                        //"/d",
+                        //"/c",
+                        //"cd /d "
+                    ]
+                }
+                //"cwd": "${workspaceRoot}\\protostar-custom\\css"
+                //"cwd": "${workspaceRoot}\\protostar-custom/"
+            }
+        }
+    ]
+}

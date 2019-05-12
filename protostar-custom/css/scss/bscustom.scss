@@ -1,0 +1,158 @@
+/*!
+ * Bootstrap v4.3.1 (https://getbootstrap.com/)
+ * Copyright 2011-2019 The Bootstrap Authors
+ * Copyright 2011-2019 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+ $body-bg: #ffffffde;
+ $body-color: rgb(0, 0, 0);
+ $headings-color:           rgb(155, 30, 30);
+
+ $container-max-widths: (
+  sm: 100%,
+  md: 100%,
+  lg: 95%,
+  xl: 90%
+) ;
+
+
+$red:     #cc001f;
+$light-gray: #bfc3c7;
+$link-color: $red;
+$navbar-light-color:$red;
+/* $nav-tabs-link-active-color:        colors('gray');*/
+$navbar-light-color: $red;
+
+
+
+ @import "../bootstrap/scss/_functions.scss";
+ @import "../bootstrap/scss/_variables.scss";
+ @import "../bootstrap/scss/_mixins.scss";
+ //@import "../bootstrap/scss/mixins/breakpoints";
+ @import "../bootstrap/scss/_root.scss";
+ @import "../bootstrap/scss/_reboot.scss";
+ @import "../bootstrap/scss/_type.scss";
+ @import "../bootstrap/scss/_images.scss";
+ @import "../bootstrap/scss/_code.scss";
+ @import "../bootstrap/scss/_grid.scss";
+ @import "../bootstrap/scss/_tables.scss";
+ @import "../bootstrap/scss/_forms.scss";
+ @import "../bootstrap/scss/_buttons.scss";
+ @import "../bootstrap/scss/_transitions.scss";
+ @import "../bootstrap/scss/_dropdown.scss";
+ @import "../bootstrap/scss/_button-group.scss";
+ @import "../bootstrap/scss/_input-group.scss";
+ @import "../bootstrap/scss/_custom-forms.scss";
+ @import "../bootstrap/scss/_nav.scss";
+ @import "../bootstrap/scss/_navbar.scss";
+ @import "../bootstrap/scss/_card.scss";
+ @import "../bootstrap/scss/_breadcrumb.scss";
+ @import "../bootstrap/scss/_pagination.scss";
+ @import "../bootstrap/scss/_badge.scss";
+ @import "../bootstrap/scss/_jumbotron.scss";
+ @import "../bootstrap/scss/_alert.scss";
+ @import "../bootstrap/scss/_progress.scss";
+ @import "../bootstrap/scss/_media.scss";
+ @import "../bootstrap/scss/_list-group.scss";
+ @import "../bootstrap/scss/_close.scss";
+ @import "../bootstrap/scss/_toasts.scss";
+ @import "../bootstrap/scss/_modal.scss";
+ @import "../bootstrap/scss/_tooltip.scss";
+ @import "../bootstrap/scss/_popover.scss";
+ @import "../bootstrap/scss/_carousel.scss";
+ @import "../bootstrap/scss/_spinners.scss";
+ @import "../bootstrap/scss/_utilities.scss";
+ @import "../bootstrap/scss/_print.scss";
+
+
+ .card-columns {
+  @include media-breakpoint-only(xl) {
+    column-count: 5;
+  }
+  @include media-breakpoint-only(lg) {
+    column-count: 4;
+  }
+  @include media-breakpoint-only(md) {
+    column-count: 3;
+  }
+  @include media-breakpoint-only(sm) {
+    column-count: 2;
+  }
+}
+
+.border-wide {
+  border-width: 5px !important;
+}
+
+.square {
+  width: 2vw;
+  height: 2vw;
+}
+
+.border-time-line-rounded-br {
+  border-radius: 0% 0% 25% 0%;
+  height:5vw;
+ 
+}
+
+.border-time-line-rounded-tl {
+  border-radius: 25% 0% 0% 0%;
+  height:5vw;
+  margin-top:-5px;
+}
+
+.border-time-line-rounded-tr {
+  border-radius: 0% 25% 0% 0%;
+  height:5vw;
+  margin-top:-5px;
+}
+
+.border-time-line-rounded-bl {
+  border-radius: 0% 0% 0% 25%;
+  height:5vw;
+}
+
+
+
+.line-arrow {
+  position: absolute;
+  overflow: hidden;
+  display: inline-block;
+  font-size: 12px; /*set the size for arrow*/
+  width: 4em;
+  height: 4em;
+  margin-top: -2em;
+  top: 50%;
+}
+
+.line-arrow.left {
+  border-top: 1px solid #a9a9a9;
+  border-left: 1px solid #a9a9a9;
+  transform: rotate(-54deg) skew(-20deg);
+  left: 20px;
+}
+
+.line-arrow.right {
+  border-top: 1px solid #a9a9a9;
+  border-right: 1px solid #a9a9a9;
+  transform: rotate(54deg) skew(20deg);
+  right: 20px;
+}
+
+.line-arrow:active,
+.line-arrow.active {
+  border-width: 2px;
+}
+
+.square {
+top: auto;
+bottom: 10px;
+}
+
+.square.left {
+transform: rotate(-45deg);
+}
+
+.square.right {
+transform: rotate(45deg);
+}
