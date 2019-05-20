@@ -12,12 +12,13 @@ defined('_JEXEC') or die;
 
 
 <?php $id = $moduleclass_sfx . $suf; ?>
+    
     <div 
         <?php //class="carousel slide d-lg-none d-md-none w-100    <?php echo $displayClass; "  ?>
         class=" col-12  <?php echo $displayClass; ?>" 
         id="<?php echo $id; ?>"
         >
-        <div class=" row  ">
+        <!-- <div class=" row  "> -->
             <?php 
             $i = 0;
             $active = "";
@@ -40,5 +41,6 @@ defined('_JEXEC') or die;
                     <div class="card border-0 bg-transparent"></div>
                 <?php endif;?>
             <?php endfor; ?>
-        </div>
+        <!-- </div> -->
+    
 </div>

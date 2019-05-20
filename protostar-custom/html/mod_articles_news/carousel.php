@@ -13,58 +13,29 @@ $mediumWidth = 3;
 $largeWidth = 4;
 $len = count($list);
 ?>
-<div class="  newsflash row <?php echo $moduleclass_sfx; ?>">
+<div class="  newsflash row no-gutters-sm <?php echo $moduleclass_sfx; ?>">
 
 
 <?php 
 /* SMALL SCREEN SIZES 1-col wide slideshow */
+$suf="-small";
 ?>
-
-
-    <?php $id = $moduleclass_sfx . "-small"; ?>
-    <div 
-        <?php //class="carousel slide d-lg-none d-md-none w-100" ?>
-        class="carousel slide  w-100 d-md-none d-lg-none d-xl-none " 
-        id="<?php echo $id; ?>"
-        data-ride="carousel"
-        data-touch="true"
-        >
-        <ol class="carousel-indicators">
-            <?php for ($i = 0; $i < $len; $i++) : ?>
-                <?php $active = ( ($i == 0) ? 'active' : ''); ?>
-                <li 
-                    data-target="#<?php echo $id; ?>" 
-                    class=" <?php echo $active; ?> " 
-                    data-slide-to="<?php echo $i; ?>">
-                </li>
-            <?php endfor; ?>
-        </ol>
-        <div class="carousel-inner w-100">
-            <?php $i = 0; $col = "w-100"; ?>
-            <?php foreach ($list as $item) : ?>
-                <?php $active = ( ($i == 0) ? ' active ' : ''); ?>
-                <div class="carousel-item item w-100 <?php echo $active; ?> ">
-                    <?php require JModuleHelper::getLayoutPath('mod_articles_news', 'card-read-more01'); ?>
-                </div>
-                <?php $i++; ?>
-            <?php endforeach; ?>
-        </div>
-        <?php require JModuleHelper::getLayoutPath('mod_articles_news', 'carousel-control-prev'); ?>
-        <?php require JModuleHelper::getLayoutPath('mod_articles_news', 'carousel-control-next'); ?>
-    </div>
+    <?php $displayClass = "col-12 d-md-none d-lg-none d-xl-none "; ?>
+    <?php $id = $moduleclass_sfx . $suf; ?>
+    <?php require JModuleHelper::getLayoutPath('mod_articles_news/parts', 'carousel-sm'); ?>
 
     <?php 
     /* MEDIUM SCREEN SIZES  wide slideshow */
     ?>
     <?php $width = $mediumWidth;
         $suf = '-medium';
-        $displayClass = " d-xs-none d-sm-none d-md-block d-lg-none d-xl-none ";
+        $displayClass = "d-none d-xs-none d-sm-none d-md-flex  d-xl-none ";
     ?>
-    <?php require JModuleHelper::getLayoutPath('mod_articles_news', 'carousel-med-lg'); ?>
+    <?php require JModuleHelper::getLayoutPath('mod_articles_news/parts', 'carousel-med-lg'); ?>
     <?php $width = $largeWidth;
         $suf = '-large';
-        $displayClass = " d-xs-none d-sm-none d-md-none d-lg-block d-xl-block ";
+        $displayClass = "d-none d-xs-none d-sm-none d-md-none d-lg-none d-xl-flex ";
     ?>
-    <?php require JModuleHelper::getLayoutPath('mod_articles_news', 'carousel-med-lg'); ?>
+    <?php require JModuleHelper::getLayoutPath('mod_articles_news/parts', 'carousel-med-lg'); ?>
 
 </div>

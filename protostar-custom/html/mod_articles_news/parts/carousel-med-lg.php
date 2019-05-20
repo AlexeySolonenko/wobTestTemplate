@@ -14,14 +14,14 @@ defined('_JEXEC') or die;
     <?php $id = $moduleclass_sfx . $suf; ?>
         <div 
             <?php //class="carousel slide d-lg-none d-md-none w-100" ?>
-            class="carousel slide col-12 <?php echo $displayClass; ?> " 
+            class="carousel slide carousel-fade col-12 <?php echo $displayClass; ?> " 
             id="<?php echo $id; ?>"
             data-ride="carousel"
             data-touch="true"
             >
             <div class=" row ">
                 <?php $classOverride = " col-1 my-auto " ?>
-                <?php require JModuleHelper::getLayoutPath('mod_articles_news', 'carousel-control-prev'); ?>
+                <?php require JModuleHelper::getLayoutPath('mod_articles_news/parts', 'carousel-control-prev'); ?>
                 <div class="carousel-inner col-10 ">
                     <?php 
                         $i = 0;
@@ -47,12 +47,12 @@ defined('_JEXEC') or die;
                                     <div class="card-deck">
                             <?php endif;?>
                             <?php if($i < ($fullLen)): ?>
-                                <?php require JModuleHelper::getLayoutPath('mod_articles_news', 'card-read-more01'); ?>
+                                <?php require JModuleHelper::getLayoutPath('mod_articles_news/parts/', 'card-read-more01'); ?>
                             <?php endif;?>
                         <?php endfor; ?>
                 </div>
                 <?php $classOverride = " col-1 my-auto " ?>
-                <?php require JModuleHelper::getLayoutPath('mod_articles_news', 'carousel-control-next'); ?>
+                <?php require JModuleHelper::getLayoutPath('mod_articles_news/parts', 'carousel-control-next'); ?>
                 <?php $classOverride = " " ?> 
             </div>
                 
@@ -61,18 +61,19 @@ defined('_JEXEC') or die;
         
     </div>
 <?php else: ?>
-<div class="col-12">
-    <div class="row">
+<div class="col-12 <?php echo $displayClass; ?>">
+    <div class="row card-deck">
         <?php 
             $i = 0;
             $col = round(12 / $width, 0, PHP_ROUND_HALF_DOWN);
             if ($col == 0) $col = 1; 
             $col = "col-{$col}";
-            $actve = "";
+            $active = "";
             $col = "";
         ?>
         <?php foreach ($list as $item) : ?>
                 <?php require JModuleHelper::getLayoutPath('mod_articles_news', 'card-read-more01'); ?>
+                
         <?php endforeach; ?>
     </div>
 </div>

@@ -132,13 +132,17 @@ else
 	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
 	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-win8.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2018.css">
+	<link href="/templates/protostar-custom/css/iconic/open-iconic-bootstrap.css" rel="stylesheet">
+	<link href="/templates/protostar-custom/css/fonts/iconmonstr/css/iconmonstr-iconic-font.min.css" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="/templates/protostar-custom/js/jquery.bcSwipe.min.js" ></script>
+	<script src="/templates/protostar-custom/js/application.js" ></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
 </head>
-<body class="site container <?php echo $option
+<body class=" container <?php echo $option
 	. ' view-' . $view
 	. ($layout ? ' layout-' . $layout : ' no-layout')
 	. ($task ? ' task-' . $task : ' no-task')
@@ -146,14 +150,15 @@ else
 	//. ($params->get('fluidContainer') ? ' fluid' : '')
 	. ($this->direction === 'rtl' ? ' rtl' : '');
 ?>">
+
 	<?php /* mostly navigation and other floating modules  */ ?>
 	<?php if ($this->countModules('position-1')) : ?>				
 		<jdoc:include type="modules" name="position-1" style="none" />
 	<?php endif; ?>
 	<!-- Body -->
 	<!-- <div class="body test" id="top"> -->
-	<div class="row" id="top">
-			<div class='col-12  '>
+	<!-- <div class="" id="top"> -->
+			
 				<!-- Header -->
 				<header class="header d-none" role="banner">
 					<div class="header-inner clearfix">
@@ -170,14 +175,14 @@ else
 						</div>
 					</div>
 				</header>
-			</div>
-			<div class='col-12'>
+			
+			
 				<jdoc:include type="modules" name="banner" style="xhtml" />
-			</div>
+			
 
 
 
-			<!-- <div class="row ">	 -->
+			<div class="row no-gutters-sm ">	
 				<?php if ($position8ModuleCount) : ?>
 					<!-- Begin Sidebar -->
 					<div id="sidebar" class="col-3">
@@ -203,12 +208,12 @@ else
 						<!-- End Right Sidebar -->
 					</div>
 				<?php endif; ?>
-			<!-- </div>	 -->
+			</div>	
 
 
-	</div>
+	<!-- </div> -->
 	<!-- Footer -->
-	<footer class="footer row" role="contentinfo">
+	<footer class="footer row no-gutters-sm" role="contentinfo">
 		<div class="col-12 ">
 			<hr />
 			<jdoc:include type="modules" name="footer" style="none" />
